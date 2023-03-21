@@ -1,6 +1,6 @@
 package com.example.toDoApp.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class ToDo {
