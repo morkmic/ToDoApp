@@ -12,7 +12,7 @@ public class User {
     private Long id;
     private String username;
     private String password;
-    @OneToMany(cascade = CascadeType.MERGE)
+    @OneToMany(cascade = CascadeType.ALL)
 
     private List<ToDo> toDoList = new ArrayList<>();
 

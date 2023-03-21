@@ -50,15 +50,17 @@ public class UserController {
         userRepository.save(user);
     }
 
-    @PostMapping("/todos/{toDoId}")
+    @PutMapping("/todos/{toDoId}")
     public void toggleToDoCompleted(@PathVariable Long toDoId){
         ToDo todo = toDoRepository.findById(toDoId).orElseThrow(() -> new NoSuchElementException());
         todo.setCompleted(!todo.getCompleted());
         toDoRepository.save(todo);
     }
-    @DeleteMapping("/todos/{todoId}")
-    public void deleteToDo(@PathVariable Long toDoId){
+    @DeleteMapping("{userId}/todos/{toDoId}")
+    public void deleteToDo(@PathVariable Long userId, @PathVariable Long toDoId){
+        User user = userRepository.findById(userId).orElseThrow(() -> new NoSuchElementException());
         ToDo toDo = toDoRepository.findById(toDoId).orElseThrow(() -> new NoSuchElementException());
+        user.getToDoList().remove(toDo);
         toDoRepository.delete(toDo);
     }
     @DeleteMapping("/{userId}")
