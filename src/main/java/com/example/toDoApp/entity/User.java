@@ -1,11 +1,15 @@
 package com.example.toDoApp.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 @Entity
 @Table(name = "users")
+@Getter @Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,37 +20,6 @@ public class User {
 
     private List<ToDo> toDoList = new ArrayList<>();
 
-    public User() {
-    }
-    public String getUsername() {
-        return username;
-    }
-
-    public User(String username, String password, List<ToDo> toDoList) {
-        this.username = username;
-        this.password = password;
-        this.toDoList = toDoList;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public List<ToDo> getToDoList() {
-        return toDoList;
-    }
-
-    public void setToDoList(List<ToDo> toDoList) {
-        this.toDoList = toDoList;
-    }
 
 
 }
