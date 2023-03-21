@@ -1,6 +1,6 @@
 package com.example.toDoApp.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class ToDo {
@@ -41,4 +41,6 @@ public class ToDo {
     public void setCompleted(Boolean completed) {
         this.completed = completed;
     }
+
+
 }

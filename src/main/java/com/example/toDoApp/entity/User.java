@@ -1,6 +1,6 @@
 package com.example.toDoApp.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +48,5 @@ public class User {
         this.toDoList = toDoList;
     }
 
-//test commit
 
 }
