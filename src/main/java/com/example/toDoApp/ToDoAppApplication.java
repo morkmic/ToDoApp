@@ -10,27 +10,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ToDoAppApplication{// implements CommandLineRunner {
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private ToDoRepository toDoRepository;
+public class ToDoAppApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(ToDoAppApplication.class, args);
     }
 
-    // @Override
-    // public void run(String... args) throws Exception {
-    //     User user = new User();
-    //     user.setPassword("pass1");
-    //     user.setUsername("John");
-    //
-    //     ToDo toDo = new ToDo();
-    //     toDo.setContent("Upload to YT");
-    //
-    //     user.getToDoList().add(toDo);
-    //     toDoRepository.save(toDo);
-    //     userRepository.save(user);
-    // }
 }

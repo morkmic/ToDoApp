@@ -1,8 +1,12 @@
 package com.example.toDoApp.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Getter @Setter
 public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -10,37 +14,7 @@ public class ToDo {
     private String content;
     private Boolean completed = false;
 
-    public ToDo() {
-    }
 
-    public ToDo(String content, Boolean completed) {
-        this.content = content;
-        this.completed = completed;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public Boolean getCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(Boolean completed) {
-        this.completed = completed;
-    }
 
 
 }
