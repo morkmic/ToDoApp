@@ -1,4 +1,4 @@
-package com.example.request;
+package com.example.toDoApp.service;
 
 import lombok.Getter;
 import lombok.Setter;
